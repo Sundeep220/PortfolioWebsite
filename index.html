@@ -17,6 +17,11 @@
     <!--========== MAIN CSS ==========-->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+
     <title>Responsive portfolio website - Crypticalcoder</title>
 </head>
 
@@ -60,7 +65,56 @@
     <!--========== MAIN ==========-->
     <main class="main">
         <!--===== Home =====-->
-        
+        <section class="home" id="home">
+            <div class = "home__container container grid">
+                <div class="home__social">
+                    <span class="home__social-follow">Follow me</span>
+                    <div class="home__social-links">
+                        <a href="https://github.com/Sundeep220/" target="_blank" class="home__social-link"><i class="uil uil-github"></i></a>
+                        <a href="https://www.linkedin.com/in/sundeep-kumar-singh-40b582222/" target="_blank" class="home__social-link"><i class="uil uil-linkedin-alt"></i></a>
+                        <a href="https://twitter.com/Sundeep220" target="_blank" class="home__social-link"><i class="uil uil-twitter-alt"></i></a>
+                        <a href="https://www.instagram.com/_intruder22/" target="_blank" class="home__social-link"><i class="uil uil-instagram"></i></a>
+                    </div>
+                </div>
+                <img src="assets/images/home.jpg" alt="" class="home__image">
+
+                <div class="home__data">
+                    <h1 class="home__title">Sundeep Kumar Singh</h1>
+                    <h3 class="home__subtitle">I'm <span class="auto-type"></span></h3>
+                    <p class="home__description">I am a Web developer, passionate about building web applications. I like to code things from scratch and enjoy bringing ideas to life in browser.</p>
+                    <a href="#about" class="button"><i class="uil uil-user button__icon"></i>
+                        More About me
+                    </a>
+                </div>
+
+                    <div class="my__info">
+                        <div class="info__item">
+                            <i class="uil uil-instagram info_icon"></i>
+                            <div>
+                                <h3 class="info__title"><strong>Instagram</strong></h3>
+                                <span class="info__subtitle">@_intruder22</span>
+                            </div>
+                        </div>
+
+                        <div class="info__item">
+                            <i class="uil uil-whatsapp info_icon"></i>
+                            <div>
+                                <h3 class="info__title"><strong>WhatsApp</strong></h3>
+                                <span class="info__subtitle">+91-6266454164</span>
+                            </div>
+                        </div>
+
+                        <div class="info__item">
+                            <i class="uil uil-envelope-edit info_icon"></i>
+                            <div>
+                                <h3 class="info__title"><strong>Email</strong></h3>
+                                <span class="info__subtitle">sundeepkumarsingh0@gmail.com</span>
+                            </div>
+                        </div>
+
+                    </div>
+            </div>
+        </section>
         <!--===== About =====-->
         
         <!--===== Qualification =====-->
@@ -92,6 +146,18 @@
 
     <!--========== MAIN JS ==========-->
     <script src="assets/js/main.js"></script>
+
+    <!-- Typed Effect -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings: ["Software Engineer", "Django Developer"],
+            typeSpeed: 100,
+            backSpeed: 50,
+            loop: true,
+            backDelay: 2000
+        })
+    </script>
 </body>
 
 </html>
