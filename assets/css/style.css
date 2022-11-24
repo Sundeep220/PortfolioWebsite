@@ -7,10 +7,10 @@
     --hue-color:242;
 
     /* HSL Color Mode */
-    --skin-color: hsl(342, 92%, 46%);
+    --skin-color: hsl(0, 93%, 50%);
     --title-color: hsl(var(--hue-color), 8%, 95%);
     --text-color: hsl(var(--hue-color), 8%, 85%);
-    --body-color: hsl(var(--hue-color), 19%, 5%);
+    --body-color: hsl(240, 29%, 9%);
     --box-color: hsl(var(--hue-color), 14%, 10%);
     --scroll-bar-color: hsl(var(--hue-color), 12%, 38%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 26%);
@@ -117,7 +117,7 @@ button, input{
     width: 100px;
     height: 100vh;
     background-color: var(--body-color);
-    border-right: 1px solid var(--box-color);
+    border-right: 1px solid rgb(47, 47, 47);
 }
 
 .nav__logo{
@@ -159,16 +159,47 @@ button, input{
 }
 
 .nav__link{
+    float: right;
     height: 100%;
     line-height: 100px;
     padding: 0 1rem;
     color: var(--title-color);
     font-weight: var(--font-medium);
     position: relative;
+    transition: .4s;
 }
+
+.btn__share{
+    position: absolute;
+    bottom: 1.8rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.social__share{
+    font-size: 1.5rem;
+}
+
+
 /* Active Link */
+.nav__link.active-link, .nav__link:hover{
+    color: var(--skin-color);
+}
 
 
+.nav__link.active-link::after, .nav__link:hover::after{
+    position: absolute;
+    content: '';
+    background-color: var(--skin-color);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    bottom: 1.8rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
 /*=============== MAIN ===============*/
 
 
