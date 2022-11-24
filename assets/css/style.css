@@ -119,7 +119,23 @@ button, input{
 
 
 /*=============== REUSABLE CSS CLASSES ===============*/
+.section{
+    padding: 6.5rem 0 2rem;
+}
 
+.section__title{
+    text-align: center;
+    font-size: var(--h1-font-size);
+    margin-bottom: var(--mb-3);
+}
+
+.section__title::before{
+    content: attr(data-heading);
+    display: block;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    color: var(--skin-color);
+}
 
 /*=============== SIDEBAR ===============*/
 .sidebar{
@@ -362,6 +378,57 @@ button, input{
 
 /*===== About Section =====*/
 
+.about__container{
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 4rem;
+    align-items: center;
+}
+
+.about__img{
+    width: 500px;
+    height: 550px;
+    border-radius: 50%;
+    justify-self: center;
+}
+
+.about__heading{
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-0-75);
+}
+
+.about__description{
+    text-align: justify;
+    padding-right: 0.6rem;
+    margin-bottom: var(--mb-2);
+}
+
+.about__info{
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    column-gap: .5rem;
+    margin-bottom: var(--mb-3);
+}
+
+.about__box{
+    text-align: center;
+    background-color: var(--box-color);
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.about__icon{
+    font-size: 1.5rem;
+    color: var(--skin-color);
+    margin-bottom: var(--mb-0-75);
+}
+
+.about__title{
+    font-size: var(--small-font-size);
+}
+
+.about__subtitle{
+    font-size: var(--smaller-font-size);
+}
 
 /*===== Qualification Section =====*/
 
