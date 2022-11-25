@@ -504,6 +504,8 @@ button, input{
     float: right;
     font-size: var(--smaller-font-size);
 }
+
+
 /*===== Skills Section =====*/
 
 .skills__container{
@@ -557,6 +559,12 @@ button, input{
 .skills__list{
     row-gap: 1.8rem;
 }
+
+/* .skills__group{
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+} */
 
 
 .skills__titles{
