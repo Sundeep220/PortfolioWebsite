@@ -544,7 +544,7 @@ button, input{
 
 .skills-active .skills__arrow{
     transform: rotate(-90deg);
-    transition: .2s;
+    transition: .5s;
 }
 
 .skills [data-content]{
