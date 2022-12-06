@@ -94,6 +94,7 @@ ul{
 
 a{
     text-decoration: none;
+    color: aquamarine;
 }
 
 img{
@@ -594,7 +595,7 @@ button, input{
 /*===== Work Section =====*/
 
 .work__container{
-    grid-template-columns: repeat(3, 330px);
+    grid-template-columns: repeat(3, 300px);
     gap: 1.8rem;
     justify-content: center;
     padding-top: 1rem;
@@ -622,6 +623,12 @@ button, input{
     padding: 1.25rem;
     border-radius: .5rem;
     transition: transform 0.5s;
+    /* height: 350px; */
+    
+}
+
+.portfolio__item-details{
+    display: none;
 }
 
 
@@ -631,6 +638,7 @@ button, input{
 
 .work__img{
     width: 100%;
+    /* height: 50%; */
     border-radius: .5rem;
     margin-bottom: var(--mb-1);
     display: block;
@@ -663,9 +671,7 @@ button, input{
 }
 
 
-.portfolio__item-details{
-    display: none;
-}
+
 
 .active-work{
     background-color: var(--skin-color);
@@ -675,8 +681,98 @@ button, input{
 
 
 /* Portfolio Popup */
+.portfolio__popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    opacity: 0;
+    visibility: hidden;
+    z-index: var(--z-modal);
+    transition: .3s;
+}
+
+.portfolio__popup.open{
+    opacity: 1;
+    visibility: visible;
+}
+
+.portfolio__popup-inner{
+    background-color: var(--box-color);
+    width: 1000px;
+    /* height: 50%; */
+    border-radius: .5rem;
+    padding: 2.5rem;
+}
+
+.portfolio__popup-content{
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    column-gap: 3.5rem;
+    position: relative;
+}
 
 
+.portfolio__popup-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.5rem;
+    color: var(--skin-color);
+    cursor: pointer;
+}
+
+.portfolio__popup-img{
+    border-radius: .5rem;
+}
+
+.portfolio__popup-info{
+
+}
+
+.portfolio__popup-subtitle{
+    font-size: var(--smaller-font-size);
+    margin-bottom: var(--mb-0-25);
+}
+
+.details__title{
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-1);
+}
+
+.details__description{
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-2);
+}
+
+.details__info li{
+    margin-bottom: var(--mb-0-75);
+    text-transform: capitalize;
+    font-size: var(--small-font-size);
+}
+
+
+.details__info li:last-child{
+
+    margin-bottom: 0;
+
+}
+
+.details__info li span{
+    font-weight: normal;
+}
+
+.details__info li a{
+    text-transform: lowercase;
+    color: aqua;
+}
 /*===== Services Section =====*/
 
 
