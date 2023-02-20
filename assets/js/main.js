@@ -101,6 +101,32 @@ inputs.forEach((input) => {
 })
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+//get all the sections that have id defined
+const sections = document.querySelectorAll("section[id]");
+console.log(sections)
 
+// add event listener for scroll
+window.addEventListener('scroll',navHighlighter);
+
+function navHighlighter(){
+    // get current sccroll position 
+    let scrollY = window.pageYOffset;
+
+    sections.forEach(current =>{
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 50;
+        const sectionId = current.getAttribute("id");
+
+        // If our current scroll position enters a space where current section is on screen is, add .active class to corresponding
+        // navigation link, else remove instance it.
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add("active-link")
+        }
+        else{
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove("active-link")
+        }
+    })
+}
 
 /*=============== SHOW SCROLL UP ===============*/
