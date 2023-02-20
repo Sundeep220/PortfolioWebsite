@@ -1026,9 +1026,27 @@ textarea.input{
 
 /*========== BREAKPOINTS ==========*/
 /* For Large Devices */
-@media screen and (max-width: 1408px) {}
+@media screen and (max-width: 1408px) {
+    .container{
+        margin-left: var(--mb-2-5);
+        margin-right: var(--mb-2-5);
+    }
+}
 
-@media screen and (max-width: 1216px) {}
+@media screen and (max-width: 1216px) {
+    .about__container{
+        column-gap: 2.5rem;
+    }
+
+    .about__description{
+        padding-right: 0;
+    }
+
+    .work__container{
+        grid-template-columns: repeat(2,330px);
+        gap: 3rem;
+    }
+}
 
 @media screen and (max-width: 1024px) {}
 
