@@ -352,6 +352,9 @@ section{position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:clamp
   transition:border-color .25s,color .25s,transform .25s;
 }
 .ct-lnk:hover{border-color:var(--border-hot);color:var(--cyan);transform:translateY(-2px)}
+
+.ct-med:hover{border-color:var(--cyan);color:var(--cyan)
+}
 .ct-big{
   font-size:clamp(2rem,5vw,3.2rem);font-weight:700;color:#fff;
   border-bottom:2px solid rgba(0,212,255,.3);padding-bottom:.3rem;
@@ -361,22 +364,74 @@ section{position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:clamp
 
 /* ─── FOOTER ─── */
 footer{
-  position:relative;z-index:2;border-top:1px solid var(--border);
-  padding:1.8rem clamp(24px,6vw,96px);
-  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;
+  position:relative;
+  z-index:2;
+  border-top:1px solid var(--border);
+  padding:2rem clamp(24px,6vw,96px);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:1rem;
 }
-.ft-name{font-family:var(--ff-mono);font-size:.78rem;color:var(--cyan)}
-.ft-copy{font-family:var(--ff-mono);font-size:.68rem;color:var(--muted2)}
 
-/* ─── RESPONSIVE ─── */
-@media(max-width:860px){
-  #about .a-grid{grid-template-columns:1fr}
-  .stat-row{grid-template-columns:repeat(3,1fr)}
+.ft-name{
+  font-family:var(--ff-mono);
+  font-size:.85rem;
+  color:var(--cyan);
+  letter-spacing:.08em;
 }
+
+.ft-links{
+  display:flex;
+  gap:1.5rem;
+  align-items:center;
+}
+
+.ft-links a{
+  text-decoration:none;
+  color:var(--muted);
+  font-family:var(--ff-mono);
+  font-size:.75rem;
+  transition:.25s ease;
+}
+
+.ft-links a:hover{
+  color:var(--cyan);
+  transform:translateY(-2px);
+}
+
+.ft-copy{
+  font-family:var(--ff-mono);
+  font-size:.72rem;
+  color:var(--muted2);
+}
+
 @media(max-width:680px){
-  .n-links,.n-btn{display:none}
-  .hamburger{display:flex}
-  .h-name{font-size:clamp(2.5rem,13vw,4.5rem)}
+
+  footer{
+    flex-direction:column;
+    text-align:center;
+    gap:1rem;
+  }
+
+  .ft-links{
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+
+  .n-links,
+  .n-btn{
+    display:none;
+  }
+
+  .hamburger{
+    display:flex;
+  }
+
+  .h-name{
+    font-size:clamp(2.5rem,13vw,4.5rem);
+  }
 }
 </style>
 </head>
@@ -427,22 +482,27 @@ footer{
     <span id="tw"></span><span id="blink">▌</span>
   </p>
   <p class="h-desc">
-    Software Engineer at
-    <strong style="color:var(--text)">Mercedes-Benz R&amp;D India</strong>,
-    building large-scale backend systems, cloud-native platforms, and GenAI applications.
-    Passionate about distributed systems, microservices, Kubernetes, and the next generation of AI-powered software.
-  </p>
+  Software Engineer at
+  <strong style="color:var(--text)">Mercedes-Benz R&amp;D India</strong>,
+  building scalable backend systems, distributed microservices, and cloud-native
+  platforms. I work across Backend, DevOps, Cloud, and GenAI technologies
+  to create reliable, high-performance systems that power real-world applications at scale.
+</p>
   <div class="h-actions">
     <a href="#projects" class="btn-p">View Work →</a>
     <a href="#contact"  class="btn-o">Get In Touch</a>
   </div>
   <div class="h-pills">
-    <span class="h-pill">Java 21+</span>
+    <span class="h-pill">Java</span>
+    <span class="h-pill">Python</span>
     <span class="h-pill">Spring Boot</span>
-    <span class="h-pill">Apache Kafka</span>
+    <span class="h-pill">Distributed Systems</span>
+    <span class="h-pill">DevOps</span>
+    <span class="h-pill">Docker</span>
     <span class="h-pill">Kubernetes</span>
-    <span class="h-pill">RAG / LLMs</span>
-    <span class="h-pill">Azure</span>
+    <span class="h-pill">CI/CD</span>
+    <span class="h-pill">GenAI &amp; Agentic AI</span>
+    <span class="h-pill">Microsoft Azure</span>
   </div>
   <div class="scroll-cue">
     <div class="scroll-line"></div>
@@ -768,13 +828,38 @@ footer{
         <span>🐙</span> GitHub
       </a>
     </div>
-    <a href="mailto:sundeepkumarsingh0@gmail.com" class="ct-big rv d4">Say Hello →</a>
+   <!-- Primary CTA -->
+    <a href="https://www.linkedin.com/in/sundeep-kumar-singh-40b582222/"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="ct-med rv d4">
+       Let's connect on LinkedIn →
+    </a>
+
+    <!-- Optional secondary CTA -->
+    <div style="margin-top:1rem;">
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sundeepkumarsingh0@gmail.com"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="ct-lnk">
+         Send an Email
+      </a>
+    </div>
   </div>
 </section>
 
-<footer>
-  <div class="ft-name">sundeep.kumar.singh</div>
-  <div class="ft-copy">© 2026 · Built with Java &amp; late nights</div>
+<footer class="footer">
+  <div class="ft-name">Sundeep Kumar Singh</div>
+
+  <div class="ft-links">
+    <a href="mailto:sundeepkumarsingh0@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/sundeep-kumar-singh-40b582222/" target="_blank">LinkedIn</a>
+    <a href="https://github.com/Sundeep220" target="_blank">GitHub</a>
+  </div>
+
+  <div class="ft-copy">
+    © 2026 Sundeep Kumar Singh · Built with Java, Spring Boot & Kubernetes
+  </div>
 </footer>
 
 <script>
@@ -801,7 +886,18 @@ function toggleMM(){document.getElementById('mm').classList.toggle('open')}
 function closeMM(){document.getElementById('mm').classList.remove('open')}
 
 /* typewriter */
-const lines=['building distributed systems.','designing scalable microservices.','architecting GenAI platforms.','developing AI agents & RAG systems.','deploying workloads on Kubernetes.','writing clean, maintainable Java.','learning something new every day.'];
+const lines=[
+  'building scalable backend systems.',
+  'designing resilient microservices.',
+  'architecting distributed platforms.',
+  'engineering cloud-native applications.',
+  'developing with Java & Spring Boot.',
+  'optimizing APIs for high performance.',
+  'orchestrating workloads on Kubernetes.',
+  'building GenAI-powered products.',
+  'creating intelligent RAG systems.',
+  'automating infrastructure & delivery.'
+];
 let li=0,ci=0,del=false;
 const tw=document.getElementById('tw');
 function type(){
