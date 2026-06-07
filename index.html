@@ -434,8 +434,65 @@ footer{
   }
 }
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style id="dhruv-inspired-upgrades">
+.skill-icon{font-size:1rem;color:var(--cyan);margin-right:.5rem}
+.ex-item{
+  background:rgba(255,255,255,.02);
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:18px;
+  padding:1.5rem;
+  margin-bottom:1.5rem;
+  backdrop-filter:blur(12px);
+}
+.ex-item:hover{
+  transform:translateY(-4px);
+  border-color:rgba(0,212,255,.25);
+  box-shadow:0 20px 50px rgba(0,212,255,.08);
+}
+#cursor-glow{
+ position:fixed;
+ width:300px;height:300px;
+ border-radius:50%;
+ pointer-events:none;
+ background:radial-gradient(circle,rgba(0,212,255,.12),transparent 70%);
+ transform:translate(-50%,-50%);
+ z-index:1;
+}
+.star-particle{
+ position:fixed;
+ width:2px;height:2px;
+ background:rgba(255,255,255,.5);
+ border-radius:50%;
+ z-index:0;
+ animation:floatStar 8s linear infinite;
+}
+@keyframes floatStar{
+ from{transform:translateY(0)}
+ to{transform:translateY(-120px)}
+}
+</style>
+
 </head>
 <body>
+
+<div id="cursor-glow"></div>
+<script>
+document.addEventListener('mousemove',e=>{
+ const g=document.getElementById('cursor-glow');
+ if(g){g.style.left=e.clientX+'px';g.style.top=e.clientY+'px';}
+});
+for(let i=0;i<30;i++){
+ const s=document.createElement('div');
+ s.className='star-particle';
+ s.style.left=Math.random()*100+'vw';
+ s.style.top=Math.random()*100+'vh';
+ s.style.animationDelay=(Math.random()*8)+'s';
+ document.body.appendChild(s);
+}
+</script>
+
 
 <div id="cur-dot"></div>
 <div id="cur-ring"></div>
@@ -586,29 +643,29 @@ footer{
     <div class="sk-cat">
       <div class="sk-head">⚙️ Languages</div>
       <div class="sk-tags">
-        <span class="sk-t">Java 21+</span><span class="sk-t">Python</span><span class="sk-t">SQL</span><span class="sk-t">JavaScript</span><span class="sk-t">YAML</span>
+        <span class="sk-t">Java</span><span class="sk-t">Python</span><span class="sk-t">SQL</span><span class="sk-t">JavaScript</span><span class="sk-t">YAML</span>
       </div>
     </div>
     <div class="sk-cat">
       <div class="sk-head">🔧 Frameworks</div>
       <div class="sk-tags">
-        <span class="sk-t">Spring Boot</span><span class="sk-t">Spring MVC</span><span class="sk-t">Hibernate</span><span class="sk-t">Collections</span><span class="sk-t">Django REST Framework</span><span class="sk-t">Langchain</span><span class="sk-t">OpenAI Agents SDK</span><span class="sk-t">FastMCP</span>
+        <span class="sk-t">Spring Boot</span><span class="sk-t">Spring MVC</span><span class="sk-t">Hibernate</span><span class="sk-t">Collections</span><span class="sk-t">Django REST Framework</span>
       </div>
     </div>
     <div class="sk-cat">
-      <div class="sk-head">🔧 Backend & Engineering</div>
+      <div class="sk-head">🔧 Backend & Architecture</div>
       <div class="sk-tags">
-        <span class="sk-t">Microservices</span><span class="sk-t">Distributed Systems</span><span class="sk-t">Event-Driven Architecture</span><span class="sk-t">REST APIs</span><span class="sk-t">System Design</span>
+        <span class="sk-t">Microservices</span><span class="sk-t">Distributed Systems</span><span class="sk-t">Multithreading</span><span class="sk-t">Event-Driven Systems</span><span class="sk-t">REST APIs</span><span class="sk-t">System Design</span><span class="sk-t">LLD</span><span class="sk-t">HLD</span>
       </div>
     </div>
     <div class="sk-cat">
       <div class="sk-head">☕ Core Tech</div>
       <div class="sk-tags">
-        <span class="sk-t">Core Java</span><span class="sk-t">OOPS/OOP</span><span class="sk-t">Java Streams</span><span class="sk-t">Multithreading</span><span class="sk-t">Concurrency</span><span class="sk-t">Design Patterns</span>
+        <span class="sk-t">Core Java</span><span class="sk-t">OOPS/OOP</span><span class="sk-t">Java Streams</span><span class="sk-t">Concurrency</span><span class="sk-t">Design Patterns</span>
       </div>
     </div>
     <div class="sk-cat">
-      <div class="sk-head">🗄️ Databases & Messaging</div>
+      <div class="sk-head">🗄️ Databases</div>
       <div class="sk-tags">
         <span class="sk-t">PostgreSQL</span><span class="sk-t">Redis</span><span class="sk-t">MongoDB</span><span class="sk-t">Apache Kafka</span><span class="sk-t">FAISS</span>
       </div>
@@ -620,9 +677,9 @@ footer{
       </div>
     </div>
     <div class="sk-cat">
-      <div class="sk-head">🤖 AI / ML</div>
+      <div class="sk-head">🤖 AI Engineering</div>
       <div class="sk-tags">
-        <span class="sk-t">LLM Integration</span><span class="sk-t">Retrieval Augmentation Generation</span><span class="sk-t">Model Context Protocol</span><span class="sk-t">Agentic AI</span><span class="sk-t">Prompt Engineering</span>
+        <span class="sk-t">Agentic AI</span><span class="sk-t">Langchain</span><span class="sk-t">OpenAI Agents SDK</span><span class="sk-t">Langraph</span><span class="sk-t">LLM Applications</span><span class="sk-t">RAG Systems</span><span class="sk-t">MCP Servers</span><span class="sk-t">Prompt Engineering</span>
       </div>
     </div>
     <div class="sk-cat">
@@ -634,7 +691,7 @@ footer{
     <div class="sk-cat">
       <div class="sk-head">💡 Concepts</div>
       <div class="sk-tags">
-        <span class="sk-t">DSA</span><span class="sk-t">Agile</span><span class="sk-t">SDLC</span><span class="sk-t">CI/CD</span><span class="sk-t">Problem Solving</span><span class="sk-t">API Design</span><span class="sk-t">Fault Tolerance</span>
+        <span class="sk-t">DSA</span><span class="sk-t">Agile</span><span class="sk-t">SDLC</span><span class="sk-t">CI/CD</span><span class="sk-t">Problem Solving</span>
       </div>
     </div>
   </div>
@@ -818,9 +875,9 @@ footer{
   <div class="ct-inner">
     <p class="ct-desc rv d2">Open to exciting opportunities in distributed systems, backend engineering, and GenAI. Whether it's a role, a project, or just a good tech conversation.</p>
     <div class="ct-links rv d3">
-      <a href="mailto:sundeepkumarsingh0@gmail.com" class="ct-lnk">
+      <!-- <a href="mailto:sundeepkumarsingh0@gmail.com" class="ct-lnk">
         <span>✉️</span> sundeepkumarsingh0@gmail.com
-      </a>
+      </a> -->
       <a href="https://www.linkedin.com/in/sundeep-kumar-singh-40b582222/" target="_blank" class="ct-lnk">
         <span>💼</span> LinkedIn
       </a>
@@ -858,7 +915,7 @@ footer{
   </div>
 
   <div class="ft-copy">
-    © 2026 Sundeep Kumar Singh · Built with Java, Spring Boot & Kubernetes
+    Built for clarity, depth, and high-signal engineering conversations.
   </div>
 </footer>
 
